@@ -28,7 +28,11 @@ public class Nineteenth {
 		 /* Konsola*/
 		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
 	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println("Kategoria: "+kat);  
+	     if(kat.equals("Senior")) {
+		     System.out.println("Test 19 zaliczony");
+		     }
+		     else 
+		    	 System.out.println("Test 19 niezaliczony"); 
 	     
 		 driver.quit();
 

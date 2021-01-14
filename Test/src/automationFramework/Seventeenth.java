@@ -22,9 +22,19 @@ public class Seventeenth {
 		 driver.findElement(By.xpath("//button")).click();  //submit
 		 Thread.sleep(1000);
 		 Alert alert = driver.switchTo().alert();  //accept in alert
-		 alert.accept();
 		 /*end*/
 		 Thread.sleep(1000);
+		 
+
+		 /*console*/
+		 String alertText=alert.getText();
+		 if(alertText.equals("First name must be filled out")) {
+		     System.out.println("Test 17 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 17 niezaliczony");
+	     }
+		 alert.accept();
 		 driver.quit();
 
 	}

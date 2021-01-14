@@ -23,9 +23,19 @@ public class Fefteenth {
 		 
 		 Thread.sleep(1000);
 		 Alert alert = driver.switchTo().alert();  //accept in alert
-		 alert.accept();
+		 
 		 /*end*/
 		 Thread.sleep(1000);
+
+		 /*console*/
+		 String alertText=alert.getText();
+		 if(alertText.equals("Data urodzenia nie moze byc pusta")) {
+		     System.out.println("Test 15 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 15 niezaliczony");
+	     }
+		 alert.accept();
 		 driver.quit();
 	}
 }

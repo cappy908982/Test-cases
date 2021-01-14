@@ -30,8 +30,14 @@ public class Fourth {
 		 
 		 /*console*/
 		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
-	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println(kat);  
+	     String kat=kategoria.substring(40,kategoria.length()); 
+	     if(kat.equals("Blad danych")) {
+		     System.out.println("Test 4 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 4 niezaliczony");
+	     }
+	     
 	     
 		 driver.quit();
 

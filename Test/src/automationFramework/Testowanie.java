@@ -1,15 +1,11 @@
 package automationFramework;
-import java.util.Scanner;
 
 public class Testowanie {
 
 	public static void main(String[] args) throws InterruptedException{
-		System.out.println("If you want to exit please tap 0");
-		int testCase=-1;
-		 Scanner scan = new Scanner(System.in);
-		 while(testCase!=0) {
-		 System.out.println("Which test case from 1 to 21 do you want to check?");
-		 testCase=scan.nextInt();
+		int testCase=0;
+		 while(testCase<21) {
+		 testCase++;
 		 
 		 switch (testCase) {
 		    case 1:
@@ -76,7 +72,6 @@ public class Testowanie {
 		    
 		 	}
 		 }
-		 scan.close();
 	}
 
 }

@@ -31,7 +31,12 @@ public class Second {
 		 /*console*/
 		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
 	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println(kat);  
+	     if(kat.equals("Blad danych")) {
+		     System.out.println("Test 2 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 2 niezaliczony");
+	     }
 	     
 		 driver.quit();
 

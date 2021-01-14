@@ -26,9 +26,15 @@ public class Third {
 		 Thread.sleep(1000);
 		 
 		 /*console*/
+		 /*console*/
 		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
 	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println(kat); 
+	     if(kat.equals("Blad danych")) {
+		     System.out.println("Test 3 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 3 niezaliczony");
+	     }
 	     
 		 driver.quit();
 

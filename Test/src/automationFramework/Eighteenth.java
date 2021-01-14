@@ -33,7 +33,11 @@ public class Eighteenth {
 		 /* Konsola*/
 		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
 	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println("Kategoria: "+kat);  
+	     if(kat.equals("Skrzat")) {
+		     System.out.println("Test 18 zaliczony");
+		     }
+		     else 
+		    	 System.out.println("Test 18 niezaliczony"); 
 	     
 		 driver.quit();
 

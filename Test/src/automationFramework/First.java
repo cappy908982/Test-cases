@@ -33,7 +33,11 @@ public class First {
 		 /*console*/
 	     String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
 	     String kat=kategoria.substring(40,kategoria.length());
-	     System.out.println("Kategoria: "+kat);
+	     if(kat.equals("Junior")) {
+	     System.out.println("Test 1 zaliczony");
+	     }
+	     else 
+	    	 System.out.println("Test 1 niezaliczony");
 	     
 		 driver.quit();
 		 

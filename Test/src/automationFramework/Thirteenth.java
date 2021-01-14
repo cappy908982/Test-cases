@@ -29,6 +29,16 @@ public class Thirteenth {
 		 alert.accept();
 		 /*end*/
 		 Thread.sleep(1000);
+		 
+		 /*console*/
+		 String kategoria=driver.findElement(By.id("returnSt")).getAttribute("innerHTML");
+	     String kat=kategoria.substring(40,kategoria.length());
+		 if(kat.equals("Blad danych")) {
+		     System.out.println("Test 13 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 13 niezaliczony");
+	     }
 		 driver.quit();
 
 	}

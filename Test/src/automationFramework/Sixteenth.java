@@ -23,9 +23,18 @@ public class Sixteenth {
 		 driver.findElement(By.xpath("//button")).click();  //submit
 		 Thread.sleep(1000);
 		 Alert alert = driver.switchTo().alert();  //accept in alert
-		 alert.accept();
 		 /*end*/
 		 Thread.sleep(1000);
+		 
+		 /*console*/
+		 String alertText=alert.getText();
+		 if(alertText.equals("Nazwisko musi byc wypelnione")) {
+		     System.out.println("Test 16 zaliczony");
+		     }
+	     else {
+	    	 System.out.println("Test 16 niezaliczony");
+	     }
+		 alert.accept();
 		 driver.quit();
 
 	}
